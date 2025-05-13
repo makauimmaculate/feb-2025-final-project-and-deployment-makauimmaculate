@@ -54,9 +54,6 @@ You can deploy this site for free using:
 
 ---
 
-## 🖼️ Screenshots
-_Add screenshots of your site here (optional)_
-
 ---
 
 ## 🙏 Credits
