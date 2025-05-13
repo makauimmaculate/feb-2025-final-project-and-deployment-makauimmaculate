@@ -5,7 +5,7 @@ A modern, responsive multipage ecommerce website for electronics, built with HTM
 ---
 
 ## 🚀 Live Demo
-[Add your deployment link here]
+[finalprojectplp.netlify.app]
 
 ---
 
