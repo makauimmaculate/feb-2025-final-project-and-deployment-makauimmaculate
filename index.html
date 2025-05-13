@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>ShopHome</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">ShopHome</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+      </ul>
+      <button id="menu-toggle">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="hero-text">
+        <h1>Welcome to ShopHome Electronics</h1>
+        <p>Your one-stop shop for the latest gadgets, accessories, and tech essentials. Enjoy unbeatable prices, fast shipping, and top-notch customer service!</p>
+        <a href="about.html" class="hero-btn">Learn More</a>
+      </div>
+      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Electronics Banner" class="hero-img">
+    </section>
+    <section class="product-grid" id="productGrid">
+      <!-- JS will populate product cards -->
+    </section>
+  </main>
+
+  <script src="js/products.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

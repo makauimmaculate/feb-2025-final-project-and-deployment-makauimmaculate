@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Contact - ShopHome</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">ShopHome</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+      </ul>
+      <button id="menu-toggle">☰</button>
+    </nav>
+  </header>
+  <main>
+    <section class="contact-section">
+      <h1>Contact Us</h1>
+      <p style="font-size:1.1em;max-width:600px;margin:0 auto 1.5em auto;text-align:center;">Have a question, suggestion, or need help? Fill out the form below and our team will get back to you as soon as possible!</p>
+      <div style="display:flex;flex-wrap:wrap;gap:2em;align-items:center;justify-content:center;">
+        <form id="contactForm" style="flex:1;min-width:260px;max-width:420px;background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.07);padding:2em 1.5em 1.5em 1.5em;animation:fadeIn 1s;">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required placeholder="Your Name">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required placeholder="you@email.com">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required placeholder="Type your message here..." rows="5"></textarea>
+          <button type="submit">Send Message</button>
+          <div id="form-message"></div>
+        </form>
+        <div style="flex:1;min-width:220px;max-width:320px;text-align:center;align-self:center;">
+          <div style="margin-bottom:1.5em;color:#0b8457;font-size:1.1em;">
+            <strong>Email:</strong> support@shophome.com<br>
+            <strong>Phone:</strong> +254 757329314
+          </div>
+          <img src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=400&q=80" alt="Contact" style="max-width:180px;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,0.10);margin-bottom:1em;">
+          <div style="margin-top:1em;font-size:0.98em;color:#555;">Our support team is available 24/7 to assist you with any inquiries.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

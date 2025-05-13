@@ -1,0 +1,395 @@
+/* styles.css - Responsive, modern, clean */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #222;
+}
+header {
+  background: #222;
+  color: #fff;
+  padding: 0.5em 0;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+  margin: 0;
+  padding: 0;
+}
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5em 0.8em;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+.nav-links li a:hover {
+  background: #444;
+}
+#menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2em;
+  cursor: pointer;
+}
+main {
+  max-width: 1100px;
+  margin: 2em auto;
+  padding: 0 1em;
+}
+
+/* Home page hero/banner */
+.hero-section {
+  background: linear-gradient(120deg, #e0f7fa 60%, #f9f9f9 100%);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 2.5em 2em 2em 2em;
+  margin-bottom: 2.5em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2em;
+  animation: fadeIn 0.7s;
+}
+.hero-section .hero-text {
+  flex: 2;
+  min-width: 220px;
+}
+.hero-section h1 {
+  color: #0b8457;
+  font-size: 2.3em;
+  margin-bottom: 0.3em;
+}
+.hero-section p {
+  font-size: 1.18em;
+  color: #333;
+  margin-bottom: 1.2em;
+}
+.hero-section .hero-btn {
+  background: #0b8457;
+  color: #fff;
+  border: none;
+  padding: 0.8em 2em;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.hero-section .hero-btn:hover {
+  background: #0a6c47;
+  transform: scale(1.06);
+}
+.hero-section .hero-img {
+  flex: 1;
+  min-width: 180px;
+  max-width: 260px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  animation: fadeIn 1.2s;
+}
+@media (max-width: 900px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 2em 1em 1.5em 1em;
+  }
+  .hero-section .hero-img {
+    margin: 0 auto;
+  }
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2em;
+}
+.product-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 1em;
+  text-align: center;
+  transition: box-shadow 0.3s, transform 0.3s;
+  position: relative;
+}
+.product-card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  transform: translateY(-6px) scale(1.03);
+  z-index: 2;
+}
+.product-card img {
+  max-width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: transform 0.3s;
+}
+.product-card:hover img {
+  transform: scale(1.07) rotate(-2deg);
+}
+.product-card h2 {
+  font-size: 1.1em;
+  margin: 0.5em 0 0.2em;
+}
+.product-card p {
+  margin: 0.2em 0 0.5em;
+}
+.product-card button {
+  background: #222;
+  color: #fff;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  margin: 0.2em 0.2em 0 0.2em;
+}
+.product-card button:hover {
+  background: #0b8457;
+  transform: scale(1.08);
+}
+.product-card .buy-options {
+  margin-top: 0.5em;
+  display: flex;
+  gap: 0.5em;
+  flex-wrap: wrap;
+}
+.product-card .buy-options button {
+  background: #0b8457;
+  color: #fff;
+  border: none;
+  padding: 0.4em 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95em;
+  transition: background 0.2s;
+}
+.product-card .buy-options button:hover {
+  background: #0a6c47;
+}
+.product-card .close-buy-options {
+  background: #b71c1c;
+}
+.product-card .close-buy-options:hover {
+  background: #7f1313;
+}
+.product-actions {
+  display: flex;
+  gap: 0.5em;
+  justify-content: center;
+  margin-top: 0.7em;
+}
+.buy-options-modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.35);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeInBg 0.3s;
+}
+.buy-options-modal[style*="display: flex"] {
+  display: flex !important;
+}
+.buy-options-content {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  padding: 2em 2.5em 1.5em 2.5em;
+  min-width: 260px;
+  text-align: center;
+  animation: fadeIn 0.3s;
+}
+.buy-options-content h3 {
+  margin-top: 0;
+  margin-bottom: 1em;
+  font-size: 1.2em;
+  color: #222;
+}
+.buy-options-content button {
+  display: block;
+  width: 100%;
+  margin: 0.5em 0;
+  background: #0b8457;
+  color: #fff;
+  border: none;
+  padding: 0.7em 0;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.buy-options-content button img {
+  margin-right: 0.5em;
+  vertical-align: middle;
+}
+.buy-options-content button:hover {
+  background: #0a6c47;
+  transform: scale(1.05);
+}
+.buy-options-content .close-buy-options {
+  background: #b71c1c;
+  margin-top: 1em;
+}
+.buy-options-content .close-buy-options:hover {
+  background: #7f1313;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes fadeInBg {
+  from { background: rgba(0,0,0,0); }
+  to { background: rgba(0,0,0,0.35); }
+}
+.about-section, .contact-section, .cart-section {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 2em;
+  margin-bottom: 2em;
+}
+.about-section, .contact-section {
+  background: linear-gradient(120deg, #f9f9f9 60%, #e0f7fa 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 2.5em 2em;
+  margin-bottom: 2em;
+  animation: fadeIn 0.7s;
+}
+.about-section h1, .contact-section h1 {
+  color: #0b8457;
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+.about-section h2 {
+  color: #222;
+  margin-top: 1.5em;
+  font-size: 1.2em;
+}
+.about-section ul {
+  padding-left: 1.2em;
+  margin: 0.5em 0 1em 0;
+}
+.about-section ul li {
+  margin-bottom: 0.4em;
+  font-size: 1.05em;
+  position: relative;
+  padding-left: 1.2em;
+}
+.about-section ul li:before {
+  content: '\2713';
+  color: #0b8457;
+  position: absolute;
+  left: 0;
+  font-size: 1em;
+}
+.about-section img {
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+.about-section img:hover {
+  transform: scale(1.04) rotate(-2deg);
+}
+.about-section .team-photo {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-right: 1em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+.contact-section form {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 2em 1.5em 1.5em 1.5em;
+  max-width: 420px;
+  margin: 1.5em auto 0 auto;
+  animation: fadeIn 1s;
+}
+.contact-section form label {
+  display: block;
+  margin-top: 1em;
+  color: #0b8457;
+  font-weight: 500;
+}
+.contact-section form input, .contact-section form textarea {
+  width: 100%;
+  padding: 0.6em;
+  margin-top: 0.3em;
+  border: 1px solid #b2dfdb;
+  border-radius: 4px;
+  font-size: 1em;
+  background: #f9f9f9;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+.contact-section form input:focus, .contact-section form textarea:focus {
+  border: 1.5px solid #0b8457;
+  box-shadow: 0 0 0 2px #b2dfdb44;
+  outline: none;
+}
+.contact-section form button {
+  margin-top: 1.2em;
+  background: #0b8457;
+  color: #fff;
+  border: none;
+  padding: 0.7em 1.5em;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background 0.2s, transform 0.2s;
+}
+.contact-section form button:hover {
+  background: #0a6c47;
+  transform: scale(1.06);
+}
+#form-message {
+  margin-top: 1em;
+  color: green;
+  font-weight: 500;
+  text-align: center;
+  animation: fadeIn 0.5s;
+}
+@media (max-width: 700px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    background: #222;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 10;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  #menu-toggle {
+    display: block;
+  }
+}

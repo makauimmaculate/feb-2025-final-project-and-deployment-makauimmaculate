@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Cart - ShopHome</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">ShopHome</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+      </ul>
+      <button id="menu-toggle">☰</button>
+    </nav>
+  </header>
+  <main>
+    <section class="cart-section">
+      <h1>Your Cart</h1>
+      <div id="cart-items">
+        <!-- JS will populate cart items -->
+      </div>
+      <div id="cart-empty-message" style="display:none; color: #888; margin-top: 1em;">Your cart is empty.</div>
+    </section>
+  </main>
+  <script src="js/main.js" defer></script>
+  <script src="js/cart.js" defer></script>
+</body>
+</html>
